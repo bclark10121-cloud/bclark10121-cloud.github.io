@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brian Clark's Games</title>
+<meta name="description" content="Small games by Brian Clark. Play them in your browser or download them for Android.">
+<meta property="og:title" content="Brian Clark's Games">
+<meta property="og:description" content="Small games by Brian Clark. Play them in your browser or download them for Android.">
+<meta property="og:image" content="https://bclark10121-cloud.github.io/images/keeper-of-the-hollow.jpg">
+<meta property="og:url" content="https://bclark10121-cloud.github.io/">
+<style>
+:root{--bg:#14181f;--panel:#1d232d;--line:rgba(255,255,255,.09);--ink:#eef1f4;--soft:#a9b3bf;--warm:#f2b35b;--go:#3f8f74}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+main{max-width:1080px;margin:0 auto;padding:40px 20px 56px}
+header{margin-bottom:28px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:40px;line-height:1.15;margin:0 0 8px;letter-spacing:.2px}
+.intro{color:var(--soft);font-size:18px;margin:0;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.shot{display:block;aspect-ratio:16/9;background:#0b0e13}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h2{font-size:22px;margin:0}
+h2 a{color:inherit;text-decoration:none}
+.tag{color:var(--warm);font-size:14px;font-weight:600}
+.desc{margin:0;color:#d5dbe2}
+.meta{color:var(--soft);font-size:14px;margin:0}
+.actions{margin-top:auto;padding-top:8px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--go);color:#fff;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:10px;min-height:44px}
+.btn:hover,.btn:focus-visible{background:#4aa585}
+.src{color:var(--soft);font-size:14px}
+.src:hover{color:var(--ink)}
+footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
+@media (max-width:720px){.grid{grid-template-columns:1fr}h1{font-size:32px}main{padding-top:28px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Brian Clark's Games</h1>
+<p class="intro">Small games for the browser and Android. Pick one to see what it is, play it in your browser or download it for your phone.</p>
+</header>
+
+<!-- One card per game. To add a game, copy a card, change data-repo, the picture, the text and the links. The version line fills itself from each game page. -->
+<section class="grid">
+
+<article class="card" data-repo="keeper-of-the-hollow">
+<a class="shot" href="keeper-of-the-hollow/"><img src="images/keeper-of-the-hollow.jpg" alt="Keeper of the Hollow: a villager greets the new keeper beside a cottage" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="keeper-of-the-hollow/">Keeper of the Hollow</a></h2><span class="tag">A cozy quest</span></div>
+<p class="desc">A storm scattered the Waylight into shards. Explore the Hollow, find treasures and make good neighbors to bring it back. No combat and no way to lose.</p>
+<p class="meta">Browser and Android<span class="ver"></span></p>
+<div class="actions"><a class="btn" href="keeper-of-the-hollow/">Open game page</a><a class="src" href="https://github.com/bclark10121-cloud/keeper-of-the-hollow">Source on GitHub</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="the-scenic-route">
+<a class="shot" href="the-scenic-route/"><img src="images/the-scenic-route.jpg" alt="The Scenic Route: a little rally car on a gravel road through Pine Lakes" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="the-scenic-route/">The Scenic Route</a></h2><span class="tag">A calm rally drive</span></div>
+<p class="desc">Drive a little rally car through lakes, hills, snow, desert, woods and coast. Hit the ramps, find hidden things and time a lap if you like. No opponents and no damage.</p>
+<p class="meta">Browser and Android<span class="ver"></span></p>
+<div class="actions"><a class="btn" href="the-scenic-route/">Open game page</a><a class="src" href="https://github.com/bclark10121-cloud/the-scenic-route">Source on GitHub</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="tiny-titans-football">
+<a class="shot" href="tiny-titans-football/"><img src="images/tiny-titans-football.jpg" alt="Tiny Titans Football: an 11 on 11 play on a green field" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="tiny-titans-football/">Tiny Titans Football</a></h2><span class="tag">Arcade 11 on 11 football</span></div>
+<p class="desc">Call a play, then run it. Throw to your receivers, juke past tacklers and pick a defense. Fictional teams and short quarters in one loud stadium.</p>
+<p class="meta">Browser and Android<span class="ver"></span></p>
+<div class="actions"><a class="btn" href="tiny-titans-football/">Open game page</a><a class="src" href="https://github.com/bclark10121-cloud/tiny-titans-football">Source on GitHub</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="lo-fi-league">
+<a class="shot" href="lo-fi-league/"><img src="images/lo-fi-league.jpg" alt="Lo-Fi League: a 7 a side soccer match at kickoff" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="lo-fi-league/">Lo-Fi League</a></h2><span class="tag">Laid-back 7 a side soccer</span></div>
+<p class="desc">Pick a fictional club and play a relaxed match or a whole league season under a sunset sky, with lo-fi beats in the background.</p>
+<p class="meta">Browser and Android<span class="ver"></span></p>
+<div class="actions"><a class="btn" href="lo-fi-league/">Open game page</a><a class="src" href="https://github.com/bclark10121-cloud/lo-fi-league">Source on GitHub</a></div>
+</div>
+</article>
+
+</section>
+
+<footer>Made by Brian Clark. Each game page has a Play in your browser button and the Android download.</footer>
+</main>
+<script>
+// Reads the version line under the buttons on each game page (G1.8) and shows it on the card.
+// If a page cannot be read, the card simply shows no version.
+document.querySelectorAll(".card[data-repo]").forEach(async (card) => {
+  try {
+    const r = await fetch("/" + card.dataset.repo + "/", {cache: "no-cache"});
+    if (!r.ok) return;
+    const doc = new DOMParser().parseFromString(await r.text(), "text/html");
+    const apk = doc.querySelector('a[href$=".apk"]');
+    const line = apk && apk.parentElement ? apk.parentElement.nextElementSibling : null;
+    const m = line ? line.textContent.match(/Version (\d+(?:\.\d+)+)\./) : null;
+    if (m) card.querySelector(".ver").textContent = " · Version " + m[1];
+  } catch (e) {}
+});
+</script>
+</body>
+</html>
