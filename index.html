@@ -34,6 +34,17 @@ h2 a{color:inherit;text-decoration:none}
 .btn:hover,.btn:focus-visible{background:#4aa585}
 .src{color:var(--soft);font-size:14px}
 .src:hover{color:var(--ink)}
+.featured{margin-bottom:36px}
+.feature{flex-direction:row;border-color:rgba(242,179,91,.45);box-shadow:0 0 0 1px rgba(242,179,91,.15),0 18px 48px rgba(242,179,91,.12);background:linear-gradient(135deg,#232a36 0%,#1d232d 55%,#2a2418 100%)}
+.feature .shot{flex:0 0 58%;aspect-ratio:auto;align-self:stretch;min-height:340px}
+.feature .body{padding:22px 24px 24px;gap:10px;justify-content:center}
+.feature h2{font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.15}
+.feature .desc{font-size:16px}
+.feature .soft{color:var(--soft)}
+.badge{align-self:flex-start;background:var(--warm);color:#231a0b;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.btn-big{font-size:17px;padding:13px 22px}
+.more{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:0 0 16px}
+@media (max-width:860px){.feature{flex-direction:column}.feature .shot{flex:none;width:100%;aspect-ratio:16/9;min-height:0}.feature h2{font-size:26px}}
 footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
 @media (max-width:720px){.grid{grid-template-columns:1fr}h1{font-size:32px}main{padding-top:28px}}
 </style>
@@ -44,6 +55,25 @@ footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
 <h1>The Game Shelf</h1>
 <p class="intro">Small games for the browser and Android. Pick one to see what it is, play it in your browser or download it for your phone.</p>
 </header>
+
+<!-- Featured game. It always sits here, above the list, and the sort below never moves it (BC, 2026-11-17: Keeper of the Hollow is the best game, so highlight it).
+     To feature another game, move its card text into this block and move Keeper of the Hollow back into the grid as a normal card.
+     Keep the Updated stamp correct on every release, the same as a grid card (G1.10, G2.7). -->
+<section class="featured" aria-labelledby="featured-name">
+<article class="card feature" data-repo="keeper-of-the-hollow">
+<a class="shot" href="keeper-of-the-hollow/"><img src="images/keeper-of-the-hollow.jpg?v=0.19.1f" alt="Keeper of the Hollow: the keeper up close with a lit lantern and Cooper the dog, under a lamp post among fireflies at night" width="960" height="540"></a>
+<div class="body">
+<span class="badge">Featured game</span>
+<div class="top"><h2 id="featured-name"><a href="keeper-of-the-hollow/">Keeper of the Hollow</a></h2><span class="tag">A cozy quest</span></div>
+<p class="desc">A storm put out the Waylight and took the sun with it. Carry your lantern through a lamp-lit Home Meadows. Furnish your cabin, swim, climb ladders to secret spots, glide on cloth wings, find treasures and make good neighbors to bring the light back.</p>
+<p class="desc soft">Play with touch, keys or an Xbox controller. No combat and no way to lose.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.19.1</span> <span class="upd">· Updated <time datetime="2026-11-17T17:30-06:00">Nov 17, 2026, 5:30 PM CT</time></span></p>
+<div class="actions"><a class="btn btn-big" href="keeper-of-the-hollow/">Open game page</a></div>
+</div>
+</article>
+</section>
+
+<h2 class="more">More games</h2>
 
 <!-- One card per game. To add a game, copy a card, change data-repo, the picture, the text and the links. The version fills itself from each game page. The Updated stamp does not: every release sets it to the release date and time in Central time (G1.10, G2.7). The page shows the newest Updated stamp first, so a new card can go anywhere in this list. -->
 <section class="grid">
@@ -75,16 +105,6 @@ footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
 <p class="desc">The beautiful game, the chill way. Skill moves, through balls and teammates who run into space against a relaxed defense. Pick a fictional club and play a match or a whole league season under a sunset sky, with lo-fi beats in the background. Plays with touch, a keyboard or an Xbox controller.</p>
 <p class="meta">Browser and Android<span class="ver"> · Version 0.6.2</span> <span class="upd">· Updated <time datetime="2026-11-17T19:35-06:00">Nov 17, 2026, 7:35 PM CT</time></span></p>
 <div class="actions"><a class="btn" href="lo-fi-league/">Open game page</a></div>
-</div>
-</article>
-
-<article class="card" data-repo="keeper-of-the-hollow">
-<a class="shot" href="keeper-of-the-hollow/"><img src="images/keeper-of-the-hollow.jpg?v=0.19.1p" alt="Keeper of the Hollow: the keeper on a lamp-lit night path in Home Meadows, talking to Mira" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="keeper-of-the-hollow/">Keeper of the Hollow</a></h2><span class="tag">A cozy quest</span></div>
-<p class="desc">A storm put out the Waylight and took the sun with it. Carry your lantern through a lamp-lit Home Meadows. Furnish your cabin, swim, climb ladders to secret spots, glide on cloth wings, find treasures and make good neighbors to bring the light back. Play with touch, keys or an Xbox controller. No combat and no way to lose.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.19.1</span> <span class="upd">· Updated <time datetime="2026-11-17T17:30-06:00">Nov 17, 2026, 5:30 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="keeper-of-the-hollow/">Open game page</a></div>
 </div>
 </article>
 
@@ -134,6 +154,7 @@ footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
 </main>
 <script>
 // Puts the most recently updated game first, using each card's Updated stamp (<time datetime>).
+// Only the cards in the grid are sorted. The featured game above the grid always stays first.
 // A card with no stamp goes to the end. Cards with the same stamp keep their order in this file.
 (() => {
   const grid = document.querySelector(".grid");
