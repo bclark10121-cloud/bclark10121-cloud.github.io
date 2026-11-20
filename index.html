@@ -34,18 +34,10 @@ h2 a{color:inherit;text-decoration:none}
 .btn:hover,.btn:focus-visible{background:#4aa585}
 .src{color:var(--soft);font-size:14px}
 .src:hover{color:var(--ink)}
-.featured{margin-bottom:36px}
-.feature{flex-direction:row;border-color:rgba(242,179,91,.45);box-shadow:0 0 0 1px rgba(242,179,91,.15),0 18px 48px rgba(242,179,91,.12);background:linear-gradient(135deg,#232a36 0%,#1d232d 55%,#2a2418 100%)}
-.feature .shot{flex:0 0 58%;aspect-ratio:auto;align-self:stretch;min-height:340px}
-.feature .body{padding:22px 24px 24px;gap:10px;justify-content:center}
-.feature h2{font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.15}
-.feature .desc{font-size:16px}
-.feature .soft{color:var(--soft)}
 .badge{align-self:flex-start;background:var(--warm);color:#231a0b;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:999px}
 .btn-big{font-size:17px;padding:13px 22px}
 .more{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:0 0 16px}
-@media (max-width:860px){.feature{flex-direction:column}.feature .shot{flex:none;width:100%;aspect-ratio:16/9;min-height:0}.feature h2{font-size:26px}}
-footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
+@media (max-width:860px){footer{margin-top:40px;color:var(--soft);font-size:14px;text-align:center}
 @media (max-width:720px){.grid{grid-template-columns:1fr}h1{font-size:32px}main{padding-top:28px}}
 /* G5.21 Title (2026-11-18): each card name in its game's own title font, served from fonts/ */
 @font-face{font-family:"T-keeper-of-the-hollow";src:url(fonts/keeper-of-the-hollow.woff2) format("woff2");font-display:swap}h2 a[href="keeper-of-the-hollow/"]{font-family:"T-keeper-of-the-hollow",Georgia,serif;font-weight:400;letter-spacing:0}
@@ -69,67 +61,10 @@ h2 a[href="lo-fi-league/"]{font-size:.9em;word-spacing:.35em}h2 a[href="pixel-ho
 <p class="intro">Small games for the browser and Android. Pick one to see what it is, play it in your browser or download it for your phone.</p>
 </header>
 
-<!-- Featured game. It always sits here, above the list, and the sort below never moves it (BC, 2026-11-17: Keeper of the Hollow is the best game, so highlight it).
-     To feature another game, move its card text into this block and move Keeper of the Hollow back into the grid as a normal card.
-     Keep the Updated stamp correct on every release, the same as a grid card (G1.10, G2.7). -->
-<section class="featured" aria-labelledby="featured-name">
-<article class="card feature" data-repo="keeper-of-the-hollow">
-<a class="shot" href="keeper-of-the-hollow/"><img src="images/keeper-of-the-hollow.jpg?v=0.19.1f" alt="Keeper of the Hollow: the keeper up close with a lit lantern and Cooper the dog, under a lamp post among fireflies at night" width="960" height="540"></a>
-<div class="body">
-<span class="badge">Featured game</span>
-<div class="top"><h2 id="featured-name"><a href="keeper-of-the-hollow/">Keeper of the Hollow</a></h2><span class="tag">A cozy quest</span></div>
-<p class="desc">A storm put out the Waylight and took the sun with it. Carry your lantern through a lamp-lit Home Meadows. Furnish your cabin, swim, climb ladders to secret spots, glide on cloth wings, find treasures and make good neighbors to bring the light back.</p>
-<p class="desc soft">Play with touch, keys or an Xbox controller, held upright or sideways. No combat and no way to lose.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.21.2</span> <span class="upd">· Updated <time datetime="2026-11-18T22:05-06:00">Nov 18, 2026, 10:05 PM CT</time></span></p>
-<div class="actions"><a class="btn btn-big" href="keeper-of-the-hollow/">Open game page</a></div>
-</div>
-</article>
-</section>
 
-<h2 class="more">More games</h2>
 
 <!-- One card per game. To add a game, copy a card, change data-repo, the picture, the text and the links. The version fills itself from each game page. The Updated stamp does not: every release sets it to the release date and time in Central time (G1.10, G2.7). The page shows the newest Updated stamp first, so a new card can go anywhere in this list. -->
 <section class="grid">
-
-<article class="card" data-repo="pixel-hollow">
-<a class="shot" href="pixel-hollow/"><img src="images/pixel-hollow.jpg?v=0.17.0p" alt="Pixel Hollow: the keeper on a meadow path in pixel art, with a chicken and a neighbor" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="pixel-hollow/">Pixel Hollow</a></h2><span class="tag">A quiet treasure hunt</span></div>
-<p class="desc">The same cozy Hollow in crisp pixel art. Find 148 treasures across six regions, fish, garden and make friends. Five save slots. No combat and no way to lose.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.19.2</span> <span class="upd">· Updated <time datetime="2026-11-18T21:54-06:00">Nov 18, 2026, 9:54 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="pixel-hollow/">Open game page</a></div>
-</div>
-</article>
-
-<article class="card" data-repo="home-by-dusk">
-<a class="shot" href="home-by-dusk/"><img src="images/home-by-dusk.jpg?v=0.7.0p" alt="Home by Dusk: Wren in the painted forest by mossy ledges and stone arches" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="home-by-dusk/">Home by Dusk</a></h2><span class="tag">A calm, spooky painted adventure</span></div>
-<p class="desc">Walk the painted Dusk Hollow with a whip in hand, find keepsakes and secrets and gather better weapons and abilities. Two of each, on their own buttons. Foes cost energy, never a life. When you tire, you head home with your coins. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.9.1</span> <span class="upd">· Updated <time datetime="2026-11-18T22:02-06:00">Nov 18, 2026, 10:02 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="home-by-dusk/">Open game page</a></div>
-</div>
-</article>
-
-<article class="card" data-repo="lo-fi-league">
-<a class="shot" href="lo-fi-league/"><img src="images/lo-fi-league.jpg?v=0.4.0p" alt="Lo-Fi League: kickoff at the centre circle in a 7 a side match" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="lo-fi-league/">Lo-Fi League</a></h2><span class="tag">Laid-back 7 a side soccer</span></div>
-<p class="desc">The beautiful game, the chill way. Skill moves, through balls and teammates who run into space against a relaxed defense. Pick a fictional club and play a match or a whole league season under a sunset sky, with lo-fi beats in the background. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.7.3</span> <span class="upd">· Updated <time datetime="2026-11-19T22:14-06:00">Nov 19, 2026, 10:14 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="lo-fi-league/">Open game page</a></div>
-</div>
-</article>
-
-<article class="card" data-repo="by-lanterns-glow">
-<a class="shot" href="by-lanterns-glow/"><img src="images/by-lanterns-glow.jpg?v=0.17.1p" alt="By Lantern's Glow: the keeper at night, a hidden find glowing in the lantern light" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="by-lanterns-glow/">By Lantern's Glow</a></h2><span class="tag">A no-combat journey through meadows, peaks, and memories</span></div>
-<p class="desc">Walk six regions by lantern light in an angled view. Find 156 treasures, some only inside your lantern light after dark. Fish, garden, fill the museum and make good neighbors. Five save slots. No combat and no way to lose.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.19.1</span> <span class="upd">· Updated <time datetime="2026-11-18T21:54-06:00">Nov 18, 2026, 9:54 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="by-lanterns-glow/">Open game page</a></div>
-</div>
-</article>
 
 <article class="card" data-repo="brickhop">
 <a class="shot" href="brickhop/"><img src="images/brickhop.jpg?v=0.4.0" alt="Brickhop 1-1: the goggles hero by a gap while a spring frog hops and a beetle walks" width="960" height="540" loading="lazy"></a>
@@ -138,35 +73,6 @@ h2 a[href="lo-fi-league/"]{font-size:.9em;word-spacing:.35em}h2 a[href="pixel-ho
 <p class="desc">A side-scrolling platformer in a toy box world. Run, hop the gaps, bump glossy blocks for coins and stomp wind-up beetles. Curl pill bugs into balls and kick them, and dodge hopping spring frogs. A hit or a fall costs a few coins, never the level. Find the hidden block, the secret pipe and three star coins. Breezy, Standard or Classic. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
 <p class="meta">Browser and Android<span class="ver"> · Version 0.4.2</span> <span class="upd">· Updated <time datetime="2026-11-19T22:50-06:00">Nov 19, 2026, 10:50 PM CT</time></span></p>
 <div class="actions"><a class="btn" href="brickhop/">Open game page</a></div>
-</div>
-</article>
-<article class="card" data-repo="sunset-static">
-<a class="shot" href="sunset-static/"><img src="images/sunset-static.jpg?v=0.5.0" alt="Sunset Static Stage 2: the needle ship over a checkered arcade floor with glowing cabinets and green Blips" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="sunset-static/">Sunset Static</a></h2><span class="tag">A calm neon side-scrolling shooter</span></div>
-<p class="desc">Fly a needle ship through a neon synthwave night, then on into a giant arcade in Stage 2. Shoot the waves, charge a beam and steer a shield pod past crystal drones, shielded haulers, prize claws and bouncing saucers, with every wave and shot on the beat. No bosses and no game over: a hit costs shield, never progress. Cruise, Standard or Arcade. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.7.0</span> <span class="upd">· Updated <time datetime="2026-11-19T22:15-06:00">Nov 19, 2026, 10:15 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="sunset-static/">Open game page</a></div>
-</div>
-</article>
-
-<article class="card" data-repo="tiny-tailwind">
-<a class="shot" href="tiny-tailwind/"><img src="images/tiny-tailwind.jpg?v=0.4.0p" alt="Tiny Tailwind: the small ship dodging the warden's ring of shots" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="tiny-tailwind/">Tiny Tailwind</a></h2><span class="tag">A twin-stick adventure</span></div>
-<p class="desc">Fly a little manta-winged ship through the Sunmeadow. Shoot past brambly critters, gather coins for Wren's Wagon, find 20 keepsakes and calm the warden of the keep. Defeat never costs a thing. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.6.3</span> <span class="upd">· Updated <time datetime="2026-11-19T15:33-06:00">Nov 19, 2026, 3:33 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="tiny-tailwind/">Open game page</a></div>
-</div>
-</article>
-
-<article class="card" data-repo="the-scenic-route">
-<a class="shot" href="the-scenic-route/"><img src="images/the-scenic-route.jpg?v=0.6.0p" alt="The Scenic Route: the car on a winding road through green hills and pines, at a checkpoint gate" width="960" height="540" loading="lazy"></a>
-<div class="body">
-<div class="top"><h2><a href="the-scenic-route/">The Scenic Route</a></h2><span class="tag">A calm rally drive</span></div>
-<p class="desc">Drive a little rally car through lakes, hills, snow, desert, woods and coast. Hit the ramps, find hidden things and time a lap if you like. No opponents and no damage. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
-<p class="meta">Browser and Android<span class="ver"> · Version 0.8.2</span> <span class="upd">· Updated <time datetime="2026-11-18T21:58-06:00">Nov 18, 2026, 9:58 PM CT</time></span></p>
-<div class="actions"><a class="btn" href="the-scenic-route/">Open game page</a></div>
 </div>
 </article>
 
@@ -190,13 +96,94 @@ h2 a[href="lo-fi-league/"]{font-size:.9em;word-spacing:.35em}h2 a[href="pixel-ho
 </div>
 </article>
 
+<article class="card" data-repo="sunset-static">
+<a class="shot" href="sunset-static/"><img src="images/sunset-static.jpg?v=0.5.0" alt="Sunset Static Stage 2: the needle ship over a checkered arcade floor with glowing cabinets and green Blips" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="sunset-static/">Sunset Static</a></h2><span class="tag">A calm neon side-scrolling shooter</span></div>
+<p class="desc">Fly a needle ship through a neon synthwave night, then on into a giant arcade in Stage 2. Shoot the waves, charge a beam and steer a shield pod past crystal drones, shielded haulers, prize claws and bouncing saucers, with every wave and shot on the beat. No bosses and no game over: a hit costs shield, never progress. Cruise, Standard or Arcade. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.7.0</span> <span class="upd">· Updated <time datetime="2026-11-19T22:15-06:00">Nov 19, 2026, 10:15 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="sunset-static/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="lo-fi-league">
+<a class="shot" href="lo-fi-league/"><img src="images/lo-fi-league.jpg?v=0.4.0p" alt="Lo-Fi League: kickoff at the centre circle in a 7 a side match" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="lo-fi-league/">Lo-Fi League</a></h2><span class="tag">Laid-back 7 a side soccer</span></div>
+<p class="desc">The beautiful game, the chill way. Skill moves, through balls and teammates who run into space against a relaxed defense. Pick a fictional club and play a match or a whole league season under a sunset sky, with lo-fi beats in the background. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.7.3</span> <span class="upd">· Updated <time datetime="2026-11-19T22:14-06:00">Nov 19, 2026, 10:14 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="lo-fi-league/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="tiny-tailwind">
+<a class="shot" href="tiny-tailwind/"><img src="images/tiny-tailwind.jpg?v=0.4.0p" alt="Tiny Tailwind: the small ship dodging the warden's ring of shots" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="tiny-tailwind/">Tiny Tailwind</a></h2><span class="tag">A twin-stick adventure</span></div>
+<p class="desc">Fly a little manta-winged ship through the Sunmeadow. Shoot past brambly critters, gather coins for Wren's Wagon, find 20 keepsakes and calm the warden of the keep. Defeat never costs a thing. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.6.3</span> <span class="upd">· Updated <time datetime="2026-11-19T15:33-06:00">Nov 19, 2026, 3:33 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="tiny-tailwind/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="keeper-of-the-hollow">
+<a class="shot" href="keeper-of-the-hollow/"><img src="images/keeper-of-the-hollow.jpg?v=0.19.1f" alt="Keeper of the Hollow: the keeper up close with a lit lantern and Cooper the dog, under a lamp post among fireflies at night" width="960" height="540"></a>
+<div class="body">
+<div class="top"><h2><a href="keeper-of-the-hollow/">Keeper of the Hollow</a></h2><span class="tag">A cozy quest</span></div>
+<p class="desc">A storm put out the Waylight and took the sun with it. Carry your lantern through a lamp-lit Home Meadows. Furnish your cabin, swim, climb ladders to secret spots, glide on cloth wings, find treasures and make good neighbors to bring the light back.</p>
+<p class="desc soft">Play with touch, keys or an Xbox controller, held upright or sideways. No combat and no way to lose.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.21.2</span> <span class="upd">· Updated <time datetime="2026-11-18T22:05-06:00">Nov 18, 2026, 10:05 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="keeper-of-the-hollow/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="home-by-dusk">
+<a class="shot" href="home-by-dusk/"><img src="images/home-by-dusk.jpg?v=0.7.0p" alt="Home by Dusk: Wren in the painted forest by mossy ledges and stone arches" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="home-by-dusk/">Home by Dusk</a></h2><span class="tag">A calm, spooky painted adventure</span></div>
+<p class="desc">Walk the painted Dusk Hollow with a whip in hand, find keepsakes and secrets and gather better weapons and abilities. Two of each, on their own buttons. Foes cost energy, never a life. When you tire, you head home with your coins. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.9.1</span> <span class="upd">· Updated <time datetime="2026-11-18T22:02-06:00">Nov 18, 2026, 10:02 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="home-by-dusk/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="the-scenic-route">
+<a class="shot" href="the-scenic-route/"><img src="images/the-scenic-route.jpg?v=0.6.0p" alt="The Scenic Route: the car on a winding road through green hills and pines, at a checkpoint gate" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="the-scenic-route/">The Scenic Route</a></h2><span class="tag">A calm rally drive</span></div>
+<p class="desc">Drive a little rally car through lakes, hills, snow, desert, woods and coast. Hit the ramps, find hidden things and time a lap if you like. No opponents and no damage. Five save slots. Plays with touch, a keyboard or an Xbox controller, held upright or sideways.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.8.2</span> <span class="upd">· Updated <time datetime="2026-11-18T21:58-06:00">Nov 18, 2026, 9:58 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="the-scenic-route/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="pixel-hollow">
+<a class="shot" href="pixel-hollow/"><img src="images/pixel-hollow.jpg?v=0.17.0p" alt="Pixel Hollow: the keeper on a meadow path in pixel art, with a chicken and a neighbor" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="pixel-hollow/">Pixel Hollow</a></h2><span class="tag">A quiet treasure hunt</span></div>
+<p class="desc">The same cozy Hollow in crisp pixel art. Find 148 treasures across six regions, fish, garden and make friends. Five save slots. No combat and no way to lose.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.19.2</span> <span class="upd">· Updated <time datetime="2026-11-18T21:54-06:00">Nov 18, 2026, 9:54 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="pixel-hollow/">Open game page</a></div>
+</div>
+</article>
+
+<article class="card" data-repo="by-lanterns-glow">
+<a class="shot" href="by-lanterns-glow/"><img src="images/by-lanterns-glow.jpg?v=0.17.1p" alt="By Lantern's Glow: the keeper at night, a hidden find glowing in the lantern light" width="960" height="540" loading="lazy"></a>
+<div class="body">
+<div class="top"><h2><a href="by-lanterns-glow/">By Lantern's Glow</a></h2><span class="tag">A no-combat journey through meadows, peaks, and memories</span></div>
+<p class="desc">Walk six regions by lantern light in an angled view. Find 156 treasures, some only inside your lantern light after dark. Fish, garden, fill the museum and make good neighbors. Five save slots. No combat and no way to lose.</p>
+<p class="meta">Browser and Android<span class="ver"> · Version 0.19.1</span> <span class="upd">· Updated <time datetime="2026-11-18T21:54-06:00">Nov 18, 2026, 9:54 PM CT</time></span></p>
+<div class="actions"><a class="btn" href="by-lanterns-glow/">Open game page</a></div>
+</div>
+</article>
+
 </section>
 
 <footer>Each game page has a Play in your browser button and the Android download.</footer>
 </main>
 <script>
 // Puts the most recently updated game first, using each card's Updated stamp (<time datetime>).
-// Only the cards in the grid are sorted. The featured game above the grid always stays first.
+// Every game is in the one list. No featured game (BC, 2026-11-19: sort all games by their last update).
 // A card with no stamp goes to the end. Cards with the same stamp keep their order in this file.
 (() => {
   const grid = document.querySelector(".grid");
