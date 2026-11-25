@@ -33,4 +33,14 @@ Cards in the grid show in order of their Updated stamp, newest first. The page s
 
 The version on each card fills itself in from the game page's version line (G1.8 in the standards). No edit is needed here when a game ships a new version.
 
+## Install as an app
+
+Chrome on Android offers Install as well as Create shortcut for this page (BC, 2026-11-25). Three pieces make that work:
+
+- `manifest.webmanifest` at the root: the name, the start page, the standalone display and the page colors.
+- `icons/icon-192.png` and `icons/icon-512.png`: the app icon. The art sits in the middle 60 percent so Android's round mask does not clip it.
+- One `<link rel="manifest">` line in the head of `index.html`.
+
+There is no service worker, so the installed shelf still needs a connection. To change the icon, replace the two PNG files at the same sizes and names.
+
 This repo holds no game code, no key and no password. The play counter needs no key.
